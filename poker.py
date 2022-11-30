@@ -85,7 +85,7 @@ def defCard():
                 stats[f"{c}-Straight"] = stats[f"{c}-Straight"]+1
             else:
                 stats[f"{c}-Straight"] = 1
-
+    
 
 
 def glatzl():
