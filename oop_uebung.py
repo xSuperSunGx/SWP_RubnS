@@ -1,7 +1,7 @@
 import enum
 
 
-class Firma() :
+class Firma():
     def __init__(self):
         self.abteilungen = []
     def get_abteilungen(self):
@@ -30,7 +30,7 @@ class Firma() :
                 max_amount = abteilung.get_amount_mitarbeiter() + 1         # +1 for gruppenleiter
                 max_abteilung = abteilung
         return max_abteilung
-    def get_prozent_person(self):
+    def get_percentage_person(self):
         frauen = 0
         maenner = 0
         insgesamt = 0

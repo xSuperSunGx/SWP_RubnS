@@ -1,6 +1,8 @@
 import random
 import webbrowser
 
+import requests
+
 
 class TypeGen:
 
@@ -140,6 +142,13 @@ def main():
         winner, equal = start()
     print(f"{new_space(4)}GEWINNER!!!!!")
 
+def upload_statistics(replace, file):
+    url = "http://localhost:5000/upload"
+    files = {'file': open(file, 'rb')}
+    data = {'replace': replace}
+    r = requests.post(url, files=files, params=data)
+    print(r.text)
+
 
 if __name__ == '__main__':
-    main()
+    upload_statistics(True, 'requirements.txt')
