@@ -132,7 +132,7 @@ def new_space(index):
     return str
 
 def new_minus_line():
-    print("---------------------------------------------------------------------")
+    print("-"*50)
 
 def main():
     winner, equal = start()
