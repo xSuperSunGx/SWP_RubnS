@@ -1,4 +1,3 @@
-#node class implementation for doubly linked list
 class DNode:
     def __init__(self, data=None, next=None, prev=None):
         self.data=data
@@ -24,7 +23,6 @@ class DNode:
         return self.data
 
 
-#doubly linked list implementation
 class DLinkedList:
 
     def __init__(self):
@@ -34,7 +32,6 @@ class DLinkedList:
     def insertAtHead(self, data):
         newNode=DNode(data=data, next=self.head, prev=None)
 
-        #if the list is empty
         if self.head==None:
             self.head=self.tail=newNode
             return
@@ -45,7 +42,6 @@ class DLinkedList:
     def insertAtTail(self, data):
         newNode= DNode(data=data, next=None, prev=self.tail)
 
-        #if the list is empty
         if self.head==None:
             self.head=self.tail=newNode
             return
