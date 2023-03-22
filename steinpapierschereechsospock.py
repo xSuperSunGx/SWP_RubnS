@@ -139,6 +139,8 @@ def main():
     while not winner:
         if not equal:
             print(f"{new_space(4)}VERLOREN!!!!!")
+        else:
+            print(f"{new_space(4)}GLEICHSTAND !!!!!")
         winner, equal = start()
     print(f"{new_space(4)}GEWINNER!!!!!")
 

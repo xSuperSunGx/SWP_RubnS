@@ -91,6 +91,15 @@ class LinkedList:
         while current is not None:
             print(current.data)
             current = current.next
+    def sort(self):
+        for i in range(self.size):
+            current = self.head
+            for x in range(self.size):
+                if current.data > current.next.data:
+                    temp = current.data
+                    current.data = current.next.data
+                    current.next.data = temp
+                current = current.next
 
 
 
@@ -107,9 +116,16 @@ def main_glatzl():
         l.append(i)
     l.pop(5)
     l.remove(8)
+    l.append(1)
+
     l.write()
+
     print(f"Size: {l.length()}")
     l.head = l.reverse(l.head)
+
+    l.write()
+    print("Sorted:")
+    l.sort()
     l.write()
 
 if __name__ == '__main__':
